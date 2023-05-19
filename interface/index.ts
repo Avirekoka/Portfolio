@@ -4,3 +4,10 @@ export interface INavLink {
     link: string;
     color: string;
 }
+
+export interface IProjects {
+    id: number;
+    projectName: string;
+    githubLink: string;
+    deployedLink: string;
+}

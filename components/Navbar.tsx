@@ -6,11 +6,11 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <nav className='w-full flex items-center justify-between h-20 px-10 bg-transparent bg-violet-400 gap-5'>
+        <nav className='w-full flex items-center justify-between h-20 px-10 bg-transparent bg-slate-900 gap-5'>
             <Link href="/">
                 <div className='flex items-center gap-3'>
                     <img src='/large.png' width={50} height={50} className='rounded-full' />
-                    <span className='font-bold text-2xl'>Nash-Dev</span>
+                    <span className='font-bold text-2xl bg-white'>Nash-Dev</span>
                 </div>
             </Link>
             <div className='flex items-center justify-evenly gap-3'>

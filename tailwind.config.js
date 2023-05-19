@@ -9,7 +9,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'about-us-page': "url('/aboutus.png')"
+      },
+      backgroundSize: "300px 100px"
+    },
   },
   plugins: [],
 }

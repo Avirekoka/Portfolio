@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Home = () => {
 
     return (
-        <div className='w-full p-10 min-h-screen bg-stone-600'>
+        <div className='w-full p-10 min-h-screen bg-gray-500'>
             <div className='grid grid-cols-2 gap-4'>
                 <div className='flex-col justify-center'>
                     <motion.div
@@ -16,12 +16,12 @@ const Home = () => {
                             bounceDamping: 8
                         }}
                     >
-                        <div style={{ width: "500px" }}>
+                        <div style={{ width: "500px" }} className='text-center text-white text-1xl border-solid border-2 rounded-lg z-1000 py-10 bg-black shadow-lg shadow-cyan-500/50'>
                             {"Avinash Kokare".split('').map((char, index) => (
                                 <motion.span
                                     key={index}
-                                    initial={{ opacity: 1, color: "white" }}
-                                    animate={{ opacity: 0, color: "white" }}
+                                    initial={{ opacity: 1, color: "#84cc16", font: "bold" }}
+                                    animate={{ opacity: 0, color: "#84cc16", font: "bold" }}
                                     transition={{ delay: index * 0.4, repeat: Infinity, repeatType: 'reverse', repeatDelay: 5 }}
                                     className='text-5xl font-bold '
                                     viewport={{ once: true }}
@@ -30,7 +30,7 @@ const Home = () => {
                                 </motion.span>
                             ))}
                             <motion.h1
-                                initial={{ opacity: 0, scale: 0, color: "black" }}
+                                initial={{ opacity: 0, scale: 0, color: "#eab308" }}
                                 animate={{
                                     scale: [1, 2, 1],
                                     borderRadius: ["10%", "20%", "20%", "10%"],
@@ -38,7 +38,7 @@ const Home = () => {
                                 }}
                                 transition={{ duration: 5, repeat: Infinity }}
                             >
-                                <p className='font-bold ml-40'>Software Developer</p>
+                                <p className='font-bold'>Software Developer</p>
                             </motion.h1>
                         </div>
                     </motion.div>
@@ -54,8 +54,11 @@ const Home = () => {
                         >
                             {char}
                         </motion.span>
-                    ))}</p>
-                    <p className='mt-36 p-5 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repellat cumque explicabo aspernatur. Exercitationem earum dolor voluptatem dolore numquam iusto blanditiis, error enim, sit molestiae nemo officia accusamus? Ad, amet!</p>
+                    ))}
+                        <br />
+                        <span className='text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repellat cumque explicabo aspernatur. Exercitationem earum dolor voluptatem dolore numquam iusto blanditiis, error enim, sit molestiae nemo officia accusamus? Ad, amet!</span>
+                    </p>
+
                 </div>
                 <div className='flex justify-center items-center mt-10'>
                     <motion.img className='border-solid border-2 rounded-lg bg-cyan-500 shadow-lg shadow-cyan-500/50 '
