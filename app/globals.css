@@ -1,23 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.card {
-    width: 300px;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075),
-        0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075),
-        0 0 16px hsl(0deg 0% 0% / 0.075);
-    transform-origin: 10% 60%;
-}
 
-.card-container {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+    background-color: white;
 }

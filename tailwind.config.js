@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'about-us-page': "url('/aboutus.png')"
+        'about-us-page': "url('/aboutus.png')",
+        'contact-us-page': "url('/svg.png')",
       },
       backgroundSize: "300px 100px"
     },

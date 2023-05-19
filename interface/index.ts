@@ -11,3 +11,9 @@ export interface IProjects {
     githubLink: string;
     deployedLink: string;
 }
+
+export interface IContactUs {
+    fullName: string;
+    email: string;
+    message: string;
+}

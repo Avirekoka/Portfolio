@@ -6,7 +6,7 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <nav className='w-full flex items-center justify-between h-20 px-10 bg-transparent bg-slate-900 gap-5'>
+        <nav className='w-full flex items-center justify-between h-20 px-10 bg-gray-900  gap-5'>
             <Link href="/">
                 <div className='flex items-center gap-3'>
                     <img src='/large.png' width={50} height={50} className='rounded-full' />
@@ -17,12 +17,11 @@ const Navbar = () => {
                 {
                     navLinks.map(link => {
                         return (
-                            <>
+                            <div key={link.id}>
                                 <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-                                    <Link href={link.link} id={`${link.id}`}>{link.title}</Link>
+                                    <Link href={link.link}>{link.title}</Link>
                                 </button>
-
-                            </>
+                            </div>
                         )
                     })
                 }
