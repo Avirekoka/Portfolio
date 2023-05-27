@@ -1,5 +1,5 @@
 'use client'
-import { navLinks } from '@/utils/constant';
+import { navLinks } from '@/utils/data';
 import Link from 'next/link';
 import React from 'react';
 

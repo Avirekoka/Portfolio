@@ -28,6 +28,27 @@ const Contact = () => {
   return (
     <div className='h-screen bg-white bg-contact-us-page'>
       <p className='text-center text-3xl pt-10 font-bold'>CONTACT US</p>
+
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 5, bounce: 0.5, type: "spring" }}
+        className='mt-5 p-5 flex justify-evenly items-center'>
+        <div className='flex justify-center items-center gap-3'>
+          <motion.img src="/phone-call.png" width={50} height={50} />
+          <p>+91-9892583723</p>
+        </div>
+
+        <div className='flex justify-center items-center gap-3'>
+          <motion.img src="/email.png" width={50} height={50} />
+          <p>avi1999kokare@gmail.com <br />avinash.kokare@fitcircle.in</p>
+        </div>
+
+        <div className='flex justify-center items-center gap-3'>
+          <motion.img src="/placeholder.png" width={50} height={50} />
+          <p>Omkar Krishna Park - 2, Vichumbe <br /> New Panvel, Raigad 410206</p>
+        </div>
+      </motion.div>
       <div className='w-full grid grid-cols-2 gap-4p'>
         <div className='flex justify-center p-10 mt-20 mb-20'>
           <motion.div
@@ -51,7 +72,7 @@ const Contact = () => {
 
         </div>
         <div className='flex justify-center items-center'>
-          <motion.img src='/contactus.png' alt='contactus image' initial={{ width: 200, height: 200 }} animate={{ width: 400, height: 400 }} transition={{ type: "spring", bounce: 0.7, duration: 4 }} />
+          <motion.img src='/contactus-1.png' alt='contactus image' initial={{ width: 200, height: 200 }} animate={{ width: 400, height: 400 }} transition={{ type: "spring", bounce: 0.7, duration: 4 }} />
         </div>
       </div>
     </div>
