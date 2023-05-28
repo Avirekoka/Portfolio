@@ -1,4 +1,4 @@
-import { IExperience, INavLink, IProjects } from "@/interface";
+import { IContactDetails, IExperience, INavLink, IProjects } from "@/interface";
 import { calculateYearAndMonth } from "./helper-functions";
 
 export const navLinks: INavLink[] = [
@@ -96,3 +96,22 @@ export const experience: IExperience[] = [
         totalExperience: calculateYearAndMonth(new Date("22 June 2021"), new Date("27 June 2022"))
     }
 ];
+
+export const contactDetails: IContactDetails[] = [
+    {
+        id: 1,
+        icon: "phone-call.png",
+        details: ["+91-9892583723"]
+    },
+    {
+        id: 2,
+        icon: "email.png",
+        details: ["avi1999kokare@gmail.com", "avinash.kokare@fitcircle.in"]
+    },
+    {
+        id: 3,
+        icon: "placeholder.png",
+        details: ["Omkar Krishna Park - 2, Vichumbe", "New Panvel, Raigad 410206"]
+    },
+
+]

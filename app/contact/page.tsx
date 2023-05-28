@@ -1,7 +1,8 @@
 'use client'
-import { IContactUs } from '@/interface';
+import { IContactDetails, IContactUs } from '@/interface';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { contactDetails } from '@/utils/data';
 
 const Contact = () => {
 
@@ -26,28 +27,34 @@ const Contact = () => {
   }
 
   return (
-    <div className='h-screen bg-white bg-contact-us-page'>
-      <p className='text-center text-3xl pt-10 font-bold'>CONTACT US</p>
-
+    <div className='min-h-screen'>
+      <p className='text-center text-3xl pt-10 font-bold text-white'>CONTACT US</p>
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 5, bounce: 0.5, type: "spring" }}
         className='mt-5 p-5 flex justify-evenly items-center'>
-        <div className='flex justify-center items-center gap-3'>
-          <motion.img src="/phone-call.png" width={50} height={50} />
-          <p>+91-9892583723</p>
-        </div>
 
-        <div className='flex justify-center items-center gap-3'>
-          <motion.img src="/email.png" width={50} height={50} />
-          <p>avi1999kokare@gmail.com <br />avinash.kokare@fitcircle.in</p>
-        </div>
-
-        <div className='flex justify-center items-center gap-3'>
-          <motion.img src="/placeholder.png" width={50} height={50} />
-          <p>Omkar Krishna Park - 2, Vichumbe <br /> New Panvel, Raigad 410206</p>
-        </div>
+        {
+          contactDetails.map((contactDetails: IContactDetails) => {
+            return (
+              <>
+                <div className='flex justify-center items-center gap-3 text-white' key={contactDetails.id}>
+                  <motion.img src={contactDetails.icon} width={50} height={50} />
+                  {
+                    contactDetails.details.map((details) => {
+                      return (
+                        <>
+                          {details}<br />
+                        </>
+                      )
+                    })
+                  }
+                </div>
+              </>
+            )
+          })
+        }
       </motion.div>
       <div className='w-full grid grid-cols-2 gap-4p'>
         <div className='flex justify-center p-10 mt-20 mb-20'>

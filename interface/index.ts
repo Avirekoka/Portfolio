@@ -29,4 +29,10 @@ export interface IExperience {
         years: number;
         months: number;
     };
+};
+
+export interface IContactDetails {
+    id: number;
+    icon: string;
+    details: string[];
 }

@@ -6,7 +6,7 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <nav className='w-full flex items-center justify-between h-20 px-10 bg-gray-900  gap-5'>
+        <nav className='w-full flex items-center justify-between h-20 px-10  gap-5'>
             <Link href="/">
                 <div className='flex items-center gap-3'>
                     <img src='/large.png' width={50} height={50} className='rounded-full' />

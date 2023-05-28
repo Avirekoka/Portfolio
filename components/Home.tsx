@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <motion.div
         >
-            <div className='w-full p-10 min-h-screen bg-white '>
+            <div className='w-full p-10 min-h-screen bg-slate-900'>
                 <div className='grid grid-cols-2 gap-4'>
                     <div className='flex-col justify-center'>
                         <motion.div

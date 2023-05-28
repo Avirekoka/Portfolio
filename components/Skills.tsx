@@ -6,7 +6,7 @@ import { projects } from '@/utils/data';
 
 const Skills = () => {
     return (
-        <div className='w-full px-10 min-h-screen bg-white mb-10'>
+        <div className='w-full px-10 min-h-screen  mb-10'>
             <p className='text-center text-5xl font-bold'>SKILLS</p>
             <div className='grid grid-cols-3 gap-5 mt-10'>
 
