@@ -1,10 +1,12 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion'
+import { experience } from '@/utils/data';
+import { IExperience } from '@/interface';
 
 const About = () => {
     return (
-        <div className='min-h-screen bg-contact-us-page px-20'>
+        <div className='min-h-screen bg-contact-us-page px-20 bg-repeat'>
             <div className='px-20 pb-15 pt-10 mt-20 h-80 bg-black text-white border-2 rounded-3xl'>
                 <div className='flex justify-center items-center'>
                     <div className='flex-initial'>
@@ -18,6 +20,50 @@ const About = () => {
                             “Prior to this role, I completed a 2-month internship with Web technology, where I honed my web development skills. Ideally, I would like to continue to specialize in web software engineering, an area where I know your firm excels.”
                         </p>
                     </div>
+                </div>
+            </div>
+
+            <div className='flex mt-8'>
+                <div className="ml-10 w-0.5 min-h-screen bg-gray-600"></div>
+                <div>
+
+                    {
+                        experience.map((experience: IExperience) => {
+                            return (
+                                <>
+                                    <div className='flex w-32 items-center my-10' key={experience.id}>
+                                        <hr className="border-2 border-black w-4" />
+                                        <div className='w-28'>
+                                            <div className='px-8 py-4 border-2 bg-black text-white flex-col gap-2 rounded-lg' style={{ width: "600px" }}>
+                                                <div className='flex gap-5 items-center'>
+                                                    <img src={experience.companyLogo} alt='Cere Labs' width={100} height={70} className='mb-2 bg-white p-2' />
+                                                    <p>Total Experienced - {experience.totalExperience.years}y {experience.totalExperience.months}m</p>
+                                                </div>
+                                                <p className='mb-4'> -{'>'} I joined {experience.companyName} on {experience.JoinedOn}.</p>
+                                                <p> -{'>'} Worked on </p>
+                                                <div className='ml-8 mb-4 flex'>
+                                                    <div className="ml-10 w-0.5 min-h-fit bg-gray-600"></div>
+                                                    <div>
+                                                        {
+                                                            experience.description.split('.').map(describe => {
+                                                                return (
+                                                                    <><p className='my-2'> -{'>'} {describe}</p></>
+                                                                )
+                                                            })
+                                                        }
+                                                    </div>
+                                                </div>
+                                                <p> -{'>'} {
+                                                    experience.EndOn !== "Present" ? `Journey at ${experience.companyName} ends on ${experience.EndOn}.` : `${experience.EndOn}`
+                                                }</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>

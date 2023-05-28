@@ -1,14 +1,13 @@
 'use client'
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
+import Link from 'next/link';
+import { motion } from 'framer-motion'
 import { projects } from '@/utils/data';
-import Link from 'next/link'
 
-const Projects = () => {
-
+const Skills = () => {
     return (
         <div className='w-full px-10 min-h-screen bg-white mb-10'>
-            <p className='text-center text-5xl font-bold'>PROJECTS</p>
+            <p className='text-center text-5xl font-bold'>SKILLS</p>
             <div className='grid grid-cols-3 gap-5 mt-10'>
 
                 {
@@ -42,4 +41,4 @@ const Projects = () => {
     )
 }
 
-export default Projects;
+export default Skills;
