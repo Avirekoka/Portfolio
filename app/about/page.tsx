@@ -19,7 +19,7 @@ const About = () => {
         }
     };
     return (
-        <div className='min-h-screen px-20 bg-repeat'>
+        <div className='min-h-screen px-20'>
             <div className='px-20 pb-15 pt-10 mt-20 h-80 bg-black text-white border-2 rounded-3xl'>
                 <div className='flex justify-center items-center'>
                     <div className='flex-initial'>
@@ -43,7 +43,7 @@ const About = () => {
                         experience.map((experience: IExperience) => {
                             return (
                                     <div className='flex w-32 items-center my-10' key={experience.id}>
-                                        <hr className="border-2 border-black w-4" />
+                                    <hr className="border-2 bg-gray-600 w-4" />
                                     <motion.div
                                         className='w-28'
                                         initial="offscreen"

@@ -6,8 +6,6 @@ export default function Page() {
   return (
     <main>
       <Home />
-      <Projects />
-      <Skills />
     </main>
   )
 }
