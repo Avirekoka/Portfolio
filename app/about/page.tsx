@@ -8,13 +8,15 @@ const About = () => {
     const cardVariants = {
         offscreen: {
             x: 500,
+            opacity: 0,
         },
         onscreen: {
             x: 0,
+            opacity: 1,
             transition: {
                 type: "spring",
-                bounce: 0.6,
-                duration: 0.8
+                bounce: 0.2,
+                duration: 1
             }
         }
     };
@@ -48,7 +50,7 @@ const About = () => {
                                         className='w-28'
                                         initial="offscreen"
                                         whileInView="onscreen"
-                                        viewport={{ once: true, amount: 0.5 }}
+                                        viewport={{ once: false, amount: 1 }}
                                     >
                                         <motion.div
                                             className='px-8 py-4 border-2 bg-black text-white flex-col gap-2 rounded-lg'
