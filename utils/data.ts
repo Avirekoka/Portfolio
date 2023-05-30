@@ -65,11 +65,11 @@ export const projects: IProjects[] = [
         description: "It is my personal ongoing project. Building using latest technologies like React and it's tranding framework Nextjs. Integrating Firebase for the authentication and Nodejs along with Mongo as database for the backend",
     },
     {
-        id: 5,
+        id: 6,
         projectName: "Truth Table Generator",
         githubLink: "https://github.com/Avinash123-456/ttg_Django",
         deployedLink: "https://github.com",
-        description: "ttg_Django is a simple project that generates truth table based on the user inputs. User can provide number of variables and condition to generate truth table. ttg_Django project build using major technology Python's backend framwork Django. Technology - Python, Django, html, css, javascript",
+        description: "Truth Table Generator is a simple project that generates truth table based on the user inputs. User can provide number of variables and condition to generate truth table. Truth Table Generator project build using major technology Python's backend framwork Django. Technology - Python, Django, html, css, javascript",
     }
 ];
 

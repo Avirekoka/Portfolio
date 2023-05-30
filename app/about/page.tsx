@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion'
 import { experience } from '@/utils/data';
 import { IExperience } from '@/interface';
+import { calculateYearAndMonth } from '@/utils/helper-functions';
 
 const About = () => {
     const cardVariants = {
@@ -20,6 +21,8 @@ const About = () => {
             }
         }
     };
+
+    const { years, months } = calculateYearAndMonth(new Date("22 June 2021"), new Date());
     return (
         <div className='min-h-screen px-20'>
             <div className='px-20 pb-15 pt-10 mt-20 h-80 bg-black text-white border-2 rounded-3xl'>
@@ -38,8 +41,14 @@ const About = () => {
                 </div>
             </div>
 
+            <div className='flex mt-8 ml-8'>
+                <p className='text-5xl text-white font-bold'>EXPERIENCE</p>
+                <p className='text-white ml-2'>The only source of knowledge is experience !</p>
+            </div>
+            <p className='mt-2 ml-8 text-white'>Total Experience : {years}y {months}m</p>
+
             <div className='flex mt-8'>
-                <div className="ml-10 w-0.5 min-h-screen bg-gray-600">sroll</div>
+                <div className="ml-10 w-0.5 min-h-screen bg-gray-600"></div>
                 <div>
                     {
                         experience.map((experience: IExperience) => {
@@ -52,6 +61,7 @@ const About = () => {
                                         whileInView="onscreen"
                                         viewport={{ once: false, amount: 1 }}
                                     >
+                                        <motion.p className='text-white' variants={cardVariants}>scroll</motion.p>
                                         <motion.div
                                             className='px-8 py-4 border-2 bg-black text-white flex-col gap-2 rounded-lg'
                                             style={{ width: "600px" }}
@@ -59,7 +69,7 @@ const About = () => {
                                         >
                                             <div className='flex gap-5 items-center justify-between'>
                                                     <img src={experience.companyLogo} alt='Cere Labs' width={100} height={70} className='mb-2 bg-white p-2' />
-                                                    <p>Total Experienced - {experience.totalExperience.years}y {experience.totalExperience.months}m</p>
+                                                <p>Total Experience - {experience.totalExperience.years}y {experience.totalExperience.months}m</p>
                                                 </div>
                                                 <p className='mb-4'> -{'>'} I joined {experience.companyName} on {experience.JoinedOn}.</p>
                                                 <p> -{'>'} Worked on </p>
