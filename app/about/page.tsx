@@ -39,7 +39,7 @@ const About = () => {
             </div>
 
             <div className='flex mt-8'>
-                <div className="ml-10 w-0.5 min-h-screen bg-gray-600"></div>
+                <div className="ml-10 w-0.5 min-h-screen bg-gray-600">sroll</div>
                 <div>
                     {
                         experience.map((experience: IExperience) => {

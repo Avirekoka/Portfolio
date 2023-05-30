@@ -10,6 +10,7 @@ export interface IProjects {
     projectName: string;
     githubLink: string;
     deployedLink: string;
+    description: string;
 };
 
 export interface IContactUs {

@@ -33,37 +33,43 @@ export const projects: IProjects[] = [
         id: 1,
         projectName: "Avi-mart",
         githubLink: "https://github.com/Avirekoka/Avi-mart",
-        deployedLink: "https://github.com/Avirekoka/Avi-mart"
+        deployedLink: "https://github.com/Avirekoka/Avi-mart",
+        description: "Avinash client and server successfully in 540 ms. Client and server successfully in 540 ms. Client and server successfully in 540 ms. Client and server successfully in 540 ms. Client and server successfully in 540 ms",
     },
     {
         id: 2,
         projectName: "File-Sharing",
         githubLink: "https://github.com/Avirekoka/File-Sharing",
-        deployedLink: "https://github.com/Avirekoka/File-Sharing"
+        deployedLink: "https://github.com/Avirekoka/File-Sharing",
+        description: "Avinash client and server successfully in 540 ms. Client and server successfully in 540 ms. Client and server successfully in 540 ms. Client and server successfully in 540 ms. Client and server successfully in 540 ms",
     },
     {
         id: 3,
         projectName: "Portfolio",
         githubLink: "https://github.com/Avirekoka/portfolio",
-        deployedLink: "https://github.com/Avirekoka/portfolio"
+        deployedLink: "https://github.com/Avirekoka/portfolio",
+        description: "It is my personal portfolio, building to showcase my skills, projects and about me. This project build using Nextjs, tailwind css for the design. There is no backend as of now",
     },
     {
         id: 4,
-        projectName: "user-management-dashboard",
+        projectName: "User Management Dashboard",
         githubLink: "https://github.com/Avirekoka/user-management-dashboard",
-        deployedLink: "https://github.com/Avirekoka/user-management-dashboard"
+        deployedLink: "https://github.com/Avirekoka/user-management-dashboard",
+        description: "This project is purly frontend project. This was my assignment given by one of the company during interview process. There is the user management dashboard, in which we can perform CRUD operations. This project build using React for the frontend and there is already available API's used for the backend",
     },
     {
         id: 5,
         projectName: "bada-player.com",
         githubLink: "https://github.com/Avirekoka/bada-player-test.com",
-        deployedLink: "https://github.com/Avirekoka/bada-player-test.com"
+        deployedLink: "https://github.com/Avirekoka/bada-player-test.com",
+        description: "It is my personal ongoing project. Building using latest technologies like React and it's tranding framework Nextjs. Integrating Firebase for the authentication and Nodejs along with Mongo as database for the backend",
     },
     {
         id: 5,
-        projectName: "ttg_Django",
+        projectName: "Truth Table Generator",
         githubLink: "https://github.com/Avinash123-456/ttg_Django",
-        deployedLink: "https://github.com"
+        deployedLink: "https://github.com",
+        description: "ttg_Django is a simple project that generates truth table based on the user inputs. User can provide number of variables and condition to generate truth table. ttg_Django project build using major technology Python's backend framwork Django. Technology - Python, Django, html, css, javascript",
     }
 ];
 

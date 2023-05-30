@@ -10,7 +10,7 @@ const Navbar = () => {
             <Link href="/">
                 <div className='flex items-center gap-3'>
                     <img src='/large.png' width={50} height={50} className='rounded-full' />
-                    <span className='font-bold text-2xl bg-white'>Nash-Dev</span>
+                    <span className='font-bold text-2xl text-white'>Nash-Dev</span>
                 </div>
             </Link>
             <div className='flex items-center justify-evenly gap-3'>
