@@ -41,27 +41,27 @@ const About = () => {
                 </div>
             </div>
 
-            <div className='flex mt-8 ml-8'>
-                <p className='text-5xl text-white font-bold'>EXPERIENCE</p>
-                <p className='text-white ml-2'>The only source of knowledge is experience !</p>
-            </div>
-            <p className='mt-2 ml-8 text-white'>Total Experience : {years}y {months}m</p>
-
             <div className='flex mt-8'>
-                <div className="ml-10 w-0.5 min-h-screen bg-gray-600"></div>
+                <p className='text-5xl text-black font-bold'>EXPERIENCE</p>
+                <p className='text-black ml-2'>The only source of knowledge is experience !</p>
+            </div>
+            <p className='mt-2 text-black'>Total Experience : {years}y {months}m</p>
+
+            <div className='flex mt-8 mb-8'>
+                <div className="w-0.5 min-h-screen bg-black"></div>
                 <div>
                     {
                         experience.map((experience: IExperience) => {
                             return (
                                     <div className='flex w-32 items-center my-10' key={experience.id}>
-                                    <hr className="border-2 bg-gray-600 w-4" />
+                                    <hr className="border-2 w-4 border-black" />
                                     <motion.div
                                         className='w-28'
                                         initial="offscreen"
                                         whileInView="onscreen"
-                                        viewport={{ once: false, amount: 1 }}
+                                        viewport={{ once: true, amount: 1 }}
                                     >
-                                        <motion.p className='text-white' variants={cardVariants}>scroll</motion.p>
+                                        <motion.p className='text-black' variants={cardVariants}>scroll</motion.p>
                                         <motion.div
                                             className='px-8 py-4 border-2 bg-black text-white flex-col gap-2 rounded-lg'
                                             style={{ width: "600px" }}
@@ -73,8 +73,8 @@ const About = () => {
                                                 </div>
                                                 <p className='mb-4'> -{'>'} I joined {experience.companyName} on {experience.JoinedOn}.</p>
                                                 <p> -{'>'} Worked on </p>
-                                                <div className='ml-8 mb-4 flex'>
-                                                    <div className="ml-10 w-0.5 min-h-fit bg-gray-600"></div>
+                                            <div className='mb-4 flex'>
+                                                <div className="ml-10 w-0.5 min-h-fit bg-white"></div>
                                                     <div>
                                                         {
                                                             experience.description.split('.').map(describe => {

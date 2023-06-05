@@ -2,7 +2,6 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import Projects from './Projects';
-import Skills from './Skills';
 
 const Home = () => {
 
@@ -10,7 +9,7 @@ const Home = () => {
         <>
             <motion.div
             >
-                <div className='w-full p-10 min-h-screen bg-slate-900'>
+                <div className='w-full p-10 min-h-screen bg-white'>
                     <div className='grid grid-cols-2 gap-4'>
                         <div className='flex-col justify-center'>
                             <motion.div
@@ -21,7 +20,7 @@ const Home = () => {
                                     bounceDamping: 8
                                 }}
                             >
-                                <div style={{ width: "500px" }} className='text-center text-white text-1xl border-solid border-2 rounded-lg z-1000 py-10 bg-black shadow-lg shadow-cyan-500/50'>
+                                <div style={{ width: "500px" }} className='text-center text-white text-1xl border-solid border-2 rounded-lg z-1000 py-10 bg-black shadow-lg shadow-cyan-500/50 md:w-32'>
                                     {"Avinash Kokare".split('').map((char, index) => (
                                         <motion.span
                                             key={index}
@@ -48,7 +47,7 @@ const Home = () => {
                                 </div>
                             </motion.div>
 
-                            <p className='text-center text-white text-1xl p-10 border-solid border-2 rounded-lg mt-20 bg-black shadow-lg shadow-cyan-500/50'>Building the future, {"One line at a time.".split('').map((char, index) => (
+                            <p className='text-center text-white text-1xl p-10 border-solid border-2 rounded-lg mt-20 bg-black shadow-lg shadow-cyan-500/50 md:text-10'>Building the future, {"One line at a time.".split('').map((char, index) => (
                                 <motion.span
                                     key={index}
                                     initial={{ opacity: 0, color: "white" }}
@@ -61,7 +60,7 @@ const Home = () => {
                                 </motion.span>
                             ))}
                                 <br />
-                                <span className='text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repellat cumque explicabo aspernatur. Exercitationem earum dolor voluptatem dolore numquam iusto blanditiis, error enim, sit molestiae nemo officia accusamus? Ad, amet!</span>
+                                <span className='text-justify sm:text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repellat cumque explicabo aspernatur. Exercitationem earum dolor voluptatem dolore numquam iusto blanditiis, error enim, sit molestiae nemo officia accusamus? Ad, amet!</span>
                             </p>
 
                         </div>
@@ -80,12 +79,7 @@ const Home = () => {
                 </div>
             </motion.div>
 
-            <div className='w-full p-10 min-h-screen bg-slate-900'>
-                <div className='grid grid-cols-2 gap-4'>
-                    <Projects />
-                    <Skills />
-                </div>
-            </div>
+            <Projects />
         </>
     )
 }

@@ -15,7 +15,6 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     try {
       e.preventDefault();
-      console.log("This is my data : ", contactUs);
       setContactUs({
         fullName: "",
         email: "",
@@ -28,7 +27,7 @@ const Contact = () => {
 
   return (
     <div className='min-h-screen'>
-      <p className='text-center text-3xl pt-10 font-bold text-white'>CONTACT US</p>
+      <p className='text-center text-3xl pt-10 font-bold text-black'>TOUCH WITH ME @</p>
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
@@ -39,7 +38,7 @@ const Contact = () => {
           contactDetails.map((contactDetails: IContactDetails) => {
             return (
               <>
-                <div className='flex justify-center items-center gap-3 text-white' key={contactDetails.id}>
+                <div className='flex justify-center items-center gap-3 text-black' key={contactDetails.id}>
                   <motion.img src={contactDetails.icon} width={50} height={50} />
                   {
                     contactDetails.details.map((details) => {
@@ -59,7 +58,7 @@ const Contact = () => {
       <div className='w-full grid grid-cols-2 gap-4p'>
         <div className='flex justify-center p-10 mt-20 mb-20'>
           <motion.div
-            initial={{ y: -200 }}
+            initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ type: "spring", bounce: 0.7, duration: 2 }}
           >

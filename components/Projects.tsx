@@ -8,18 +8,18 @@ const Projects = () => {
 
     return (
         <>
-            <div className='flex mt-8'>
-                <div className="ml-10 w-0.5 min-h-screen bg-gray-600"></div>
+            <div className='flex'>
+                <div className="ml-10 w-0.5 min-h-screen bg-black"></div>
                 <div>
                     {
                         projects.map((project) => {
                             return (
-                                <div className='flex w-32 items-center my-10' key={project.id}>
-                                    <hr className="border-2 bg-gray-600 w-4" />
+                                <div className='flex w-32 items-center my-5' key={project.id}>
+                                    <hr className="border-2 border-black w-4" />
                                     <motion.div
                                         className='w-28'
                                     >
-                                        <div className="w-full max-w-sm bg-black border border-gray-200 rounded-lg shadow  py-5" style={{ width: "450px" }}>
+                                        <div className="bg-black border border-gray-200 rounded-lg shadow  py-5" style={{ width: "650px" }}>
                                             <div className="pb-10">
                                                 <h5 className="ml-4 text-xl font-medium text-gray-900 dark:text-white">{project.id}) {project.projectName}</h5>
                                                 <div className="flex ml-4 mt-4 gap-4">
