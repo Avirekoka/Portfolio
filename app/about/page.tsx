@@ -24,14 +24,14 @@ const About = () => {
 
     const { years, months } = calculateYearAndMonth(new Date("22 June 2021"), new Date());
     return (
-        <div className='min-h-screen px-20'>
-            <div className='px-20 pb-15 pt-10 mt-20 h-80 bg-black text-white border-2 rounded-3xl'>
-                <div className='flex justify-center items-center'>
+        <div className='min-h-screen md:px-20'>
+            <div className='md:px-20 pb-15 pt-10 mt-20 md:h-80 bg-black text-white border-2 rounded-3xl'>
+                <div className='md:flex md:justify-center md:items-center'>
                     <div className='flex-initial'>
-                        <img src='contactus-1.png' width={1000} height={150} />
+                        <img src='contactus-1.png' />
                     </div>
                     <div className='flex-initial'>
-                        <motion.p className='text-6xl font-bold text-right'>ABOUT ME.</motion.p>
+                        <motion.p className='text-2xl md:text-6xl font-bold text-center md:text-right'>ABOUT ME.</motion.p>
                         <p className='ml-10 px-20 text-justify'>
                             “I have around two year's of experience as a junior software engineer. In my short time there, I've already contributed to projects and assisted with managing one project for one of the firm's long-time clients.
 

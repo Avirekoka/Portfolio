@@ -19,12 +19,6 @@ export const navLinks: INavLink[] = [
         title: "Contact",
         link: "/contact",
         color: "bg-lime-500"
-    },
-    {
-        id: 4,
-        title: "Social",
-        link: "/social",
-        color: "bg-green-400"
     }
 ];
 
