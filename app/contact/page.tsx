@@ -26,39 +26,42 @@ const Contact = () => {
   }
 
   return (
-    <div className='min-h-screen'>
-      <p className='text-center text-3xl pt-10 font-bold text-black'>TOUCH WITH ME @</p>
+    <div className='min-h-screen md:mx-20 mx-8'>
+      <p className='text-center text-3xl pt-10 font-bold text-black mb-10'>TOUCH WITH ME @</p>
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 5, bounce: 0.5, type: "spring" }}
-        className='mt-5 p-5 flex justify-evenly items-center'>
-
+        className='mt-5 md:flex justify-between grid grid-col-12 gap-8 items-center'>
         {
           contactDetails.map((contactDetails: IContactDetails) => {
             return (
               <>
-                <div className='flex justify-center items-center gap-3 text-black' key={contactDetails.id}>
-                  <motion.img src={contactDetails.icon} width={50} height={50} />
-                  {
-                    contactDetails.details.map((details) => {
-                      return (
-                        <>
-                          {details}<br />
-                        </>
-                      )
-                    })
-                  }
+                <div className='md:flex md:justify-center md:items-center md:gap-3 text-black grid grid-cols-4 items-center' key={contactDetails.id}>
+                  <motion.img src={contactDetails.icon} className='w-10 h:10' />
+                  <div className='col-span-3'>
+                    {
+                      contactDetails.details.map((details) => {
+                        return (
+                          <>
+                            {details}<br />
+                          </>
+                        )
+                      })
+                    }
+
+                  </div>
+                  <hr className='w-72 mt-4 md:w-0 md:mt-0' />
                 </div>
               </>
             )
           })
         }
       </motion.div>
-      <div className='w-full grid grid-cols-2 gap-4p'>
-        <div className='flex justify-center p-10 mt-20 mb-20'>
+      <div className='w-full flex flex-col-reverse md:grid md:grid-cols-2 md:items-center'>
+        <div className='flex justify-center mt-20 mb-20'>
           <motion.div
-            initial={{ y: -100 }}
+            initial={{ y: -50 }}
             animate={{ y: 0 }}
             transition={{ type: "spring", bounce: 0.7, duration: 2 }}
           >
@@ -77,7 +80,7 @@ const Contact = () => {
           </motion.div>
 
         </div>
-        <div className='flex justify-center items-center'>
+        <div className='flex justify-center items-center mt-10'>
           <motion.img src='/contactus-1.png' alt='contactus image' initial={{ width: 200, height: 200 }} animate={{ width: 400, height: 400 }} transition={{ type: "spring", bounce: 0.7, duration: 4 }} />
         </div>
       </div>

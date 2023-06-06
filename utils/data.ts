@@ -101,7 +101,7 @@ export const contactDetails: IContactDetails[] = [
     {
         id: 1,
         icon: "phone-call.png",
-        details: ["+91-9892583723"]
+        details: ["+91-9892583723", "+91-9892418845"]
     },
     {
         id: 2,
@@ -111,7 +111,7 @@ export const contactDetails: IContactDetails[] = [
     {
         id: 3,
         icon: "placeholder.png",
-        details: ["Omkar Krishna Park - 2, Vichumbe", "New Panvel, Raigad 410206"]
+        details: ["Omkar Krishna Park - 2, Vichumbe, New Panvel, Raigad 410206"]
     },
 
 ]
