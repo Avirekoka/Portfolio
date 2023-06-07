@@ -1,16 +1,13 @@
 'use client'
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion'
 import { experience } from '@/utils/data';
 import { IExperience } from '@/interface';
-import { calculateYearAndMonth } from '@/utils/helper-functions';
+import { calculateYearAndMonth, deviceWidth } from '@/utils/helper-functions';
 import styles from './about.module.css';
 import Image from 'next/image';
 
 const About = () => {
-
-    const checkIsMobile = (window as any).matchMedia("(max-width: 700px)").matches;
-
     const cardVariants = {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
@@ -65,8 +62,8 @@ const About = () => {
                                     <hr className="border-2 w-4 border-black" />
                                     <motion.div
                                         className='w-28'
-                                        initial={checkIsMobile ? 'hidden' : 'offscreen'}
-                                        whileInView={checkIsMobile ? 'visible' : 'onscreen'}
+                                        initial={deviceWidth() ? 'hidden' : 'offscreen'}
+                                        whileInView={deviceWidth() ? 'visible' : 'onscreen'}
                                         viewport={{ once: true, amount: 1 }}
                                         variants={cardVariants}
                                     >

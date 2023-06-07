@@ -15,5 +15,7 @@ export const calculateYearAndMonth = (startDate: Date, endDate: Date) => {
 };
 
 export const deviceWidth = () => {
-    return (window as any).matchMedia("(max-width: 700px)").matches;
+    if (typeof window !== "undefined") {
+        return (window as any).matchMedia("(max-width: 700px)").matches;
+    }
 }
