@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { experience } from '@/utils/data';
 import { IExperience } from '@/interface';
 import { calculateYearAndMonth } from '@/utils/helper-functions';
+import './about.module.css';
 
 const About = () => {
     const cardVariants = {
@@ -25,14 +26,14 @@ const About = () => {
     const { years, months } = calculateYearAndMonth(new Date("22 June 2021"), new Date());
     return (
         <div className='min-h-screen md:px-20'>
-            <div className='md:px-20 pb-15 pt-10 mt-20 md:h-80 bg-black text-white border-2 rounded-3xl'>
+            <div className='md:px-20 md:pb-15 md:pt-10 mt-20 md:h-80 bg-black text-white border-2 rounded-3xl'>
                 <div className='md:flex md:justify-center md:items-center'>
-                    <div className='flex-initial'>
+                    <div>
                         <img src='contactus-1.png' />
                     </div>
-                    <div className='flex-initial'>
-                        <motion.p className='text-2xl md:text-6xl font-bold text-center md:text-right'>ABOUT ME.</motion.p>
-                        <p className='ml-10 px-20 text-justify'>
+                    <div>
+                        <motion.p className='text-3xl mt-5 md:text-6xl font-bold text-center md:text-right'>ABOUT ME.</motion.p>
+                        <p className='p-5 md:p-0 md:ml-10 md:px-20 text-justify'>
                             “I have around two year's of experience as a junior software engineer. In my short time there, I've already contributed to projects and assisted with managing one project for one of the firm's long-time clients.
 
                             “Prior to this role, I completed a 2-month internship with Web technology, where I honed my web development skills. Ideally, I would like to continue to specialize in web software engineering, an area where I know your firm excels.”
@@ -41,19 +42,19 @@ const About = () => {
                 </div>
             </div>
 
-            <div className='flex mt-8'>
-                <p className='text-5xl text-black font-bold'>EXPERIENCE</p>
+            <div className='md:flex mt-8'>
+                <p className='text-3xl ml-2 md:ml-0 md:text-5xl text-black font-bold'>EXPERIENCE</p>
                 <p className='text-black ml-2'>The only source of knowledge is experience !</p>
             </div>
-            <p className='mt-2 text-black'>Total Experience : {years}y {months}m</p>
+            <p className='mt-2 ml-2 md:ml-0 text-black'>Total Experience : {years}y {months}m</p>
 
-            <div className='flex mt-8 mb-8'>
-                <div className="w-0.5 min-h-screen bg-black"></div>
+            <div className='flex my-8'>
+                <div className="md:w-0.5 md:min-h-screen bg-black"></div>
                 <div>
                     {
                         experience.map((experience: IExperience) => {
                             return (
-                                    <div className='flex w-32 items-center my-10' key={experience.id}>
+                                <div className='md:flex md:w-32 items-center my-10' key={experience.id}>
                                     <hr className="border-2 w-4 border-black" />
                                     <motion.div
                                         className='w-28'
@@ -64,7 +65,7 @@ const About = () => {
                                         <motion.p className='text-black' variants={cardVariants}>scroll</motion.p>
                                         <motion.div
                                             className='px-8 py-4 border-2 bg-black text-white flex-col gap-2 rounded-lg'
-                                            style={{ width: "600px" }}
+                                            style={{ width: "350px" }}
                                             variants={cardVariants}
                                         >
                                             <div className='flex gap-5 items-center justify-between'>

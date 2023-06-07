@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 
 const Navbar = () => {
     const [toggle, setToggle] = useState<boolean>(false);
-    const [pathName, setPathName] = useState<string>(window.location.pathname);
+    const [pathName, setPathName] = useState((window as any).location.pathname);
 
     const setState = (link: string) => {
         setToggle(false);
