@@ -5,6 +5,7 @@ import { InstagramSVG } from '@/svg-components/InstagramSVG';
 import GithubSVG from '@/svg-components/GithubSVG';
 import FacebookSVG from '@/svg-components/FacebookSVG';
 import LinkedinSVG from '@/svg-components/LinkedinSVG';
+import Image from 'next/image';
 
 const Footer = () => {
     return (
@@ -13,7 +14,7 @@ const Footer = () => {
                 <div className="sm:flex sm:items-center sm:justify-between gap-10 px-10">
                     <div className='flex-col items-center'>
                         <Link href="/" className="flex items-center justify-center mb-4 sm:mb-0 gap-3">
-                            <img src="/large.png" className='rounded-full w-16 md:w-20' />
+                            <Image alt="Footer iamge" src="/large.png" className='rounded-full w-16 md:w-20' />
                             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Nash-Dev</span>
                         </Link>
                     </div>
