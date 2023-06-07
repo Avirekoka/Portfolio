@@ -3,6 +3,7 @@ import { IContactDetails, IContactUs } from '@/interface';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { contactDetails } from '@/utils/data';
+import styles from './contact.module.css';
 
 const Contact = () => {
 
@@ -81,7 +82,7 @@ const Contact = () => {
 
         </div>
         <div className='flex justify-center items-center mt-10'>
-          <motion.img src='/contactus-1.png' alt='contactus image' initial={{ width: 200, height: 200 }} animate={{ width: 400, height: 400 }} transition={{ type: "spring", bounce: 0.7, duration: 4 }} />
+          <motion.img src='/contactus-1.png' alt='contactus image' initial={{ width: 200, height: 200 }} animate={{ width: 400, height: 400 }} transition={{ type: "spring", bounce: 0.7, duration: 4 }} className={`${styles.contactImage}`} />
         </div>
       </div>
     </div>

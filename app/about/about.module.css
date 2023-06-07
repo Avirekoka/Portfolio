@@ -1,3 +1,18 @@
-.avinash {
-    background-color: red;
+.experienceCard {
+    width: 600px;
+}
+
+@media screen and (max-width: 480px) {
+    .experienceCard {
+        width: 360px;
+    }
+
+    .aboutImage {
+        width: 270px;
+        height: 270px;
+    }
+
+    .aboutMeHeading {
+        display: none;
+    }
 }
