@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const Navbar = () => {
     const [toggle, setToggle] = useState<boolean>(false);
-    const [pathName, setPathName] = useState((window as any).location.pathname);
+    const [pathName, setPathName] = useState(window.location.pathname);
 
     const setState = (link: string) => {
         setToggle(false);
