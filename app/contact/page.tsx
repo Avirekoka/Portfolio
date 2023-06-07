@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { contactDetails } from '@/utils/data';
 import styles from './contact.module.css';
+import { deviceWidth } from '@/utils/helper-functions';
 
 const Contact = () => {
 
@@ -24,7 +25,11 @@ const Contact = () => {
     } catch (error) {
       console.log("Error : ", error);
     }
-  }
+  };
+
+  const setAnimationWRTMediaQuery = {
+    intial: deviceWidth() ? { width: 150, height: 150 } : { width: 200, height: 200 }, animate: deviceWidth() ? { width: 200, height: 200 } : { width: 400, height: 400 }, transition: { type: "spring", bounce: 0.4, duration: 4 }
+  };
 
   return (
     <div className='min-h-screen md:mx-20 mx-8'>
@@ -60,7 +65,7 @@ const Contact = () => {
         }
       </motion.div>
       <div className='w-full flex flex-col-reverse md:grid md:grid-cols-2 md:items-center'>
-        <div className='flex justify-center mt-20 mb-20'>
+        <div className='flex justify-center mt-10 md:mt-20 mb-20'>
           <motion.div
             initial={{ y: -50 }}
             animate={{ y: 0 }}
@@ -82,7 +87,7 @@ const Contact = () => {
 
         </div>
         <div className='flex justify-center items-center mt-10'>
-          <motion.img src='/contactus-1.png' alt='contactus image' initial={{ width: 200, height: 200 }} animate={{ width: 400, height: 400 }} transition={{ type: "spring", bounce: 0.7, duration: 4 }} className={`${styles.contactImage}`} />
+          <motion.img src='/contactus-1.png' alt='contactus image' initial={setAnimationWRTMediaQuery.intial} animate={setAnimationWRTMediaQuery.animate} transition={setAnimationWRTMediaQuery.transition} className={`${styles.contactImage}`} />
         </div>
       </div>
     </div>

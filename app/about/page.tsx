@@ -8,7 +8,7 @@ import styles from './about.module.css';
 
 const About = () => {
 
-    const checkIsMobile = window.matchMedia("(max-width: 700px)").matches;
+    const checkIsMobile = (window as any).matchMedia("(max-width: 700px)").matches;
 
     const cardVariants = {
         hidden: { opacity: 0 },
@@ -40,7 +40,7 @@ const About = () => {
                     <div>
                         <motion.p className={`text-3xl mt-5 md:text-6xl font-bold text-center md:text-right ${styles.aboutMeHeading}`}>ABOUT ME.</motion.p>
                         <p className='p-5 md:p-0 md:ml-10 md:px-20 text-justify'>
-                            “I have around two year's of experience as a junior software engineer. In my short time there, I've already contributed to projects and assisted with managing one project for one of the firm's long-time clients.
+                            “I have around two year&apos;s of experience as a junior software engineer. In my short time there, I&apos;ve already contributed to projects and assisted with managing one project for one of the firm&apos;s long-time clients.
 
                             “Prior to this role, I completed a 2-month internship with Web technology, where I honed my web development skills. Ideally, I would like to continue to specialize in web software engineering, an area where I know your firm excels.”
                         </p>
