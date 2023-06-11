@@ -6,4 +6,7 @@
     .projectDiv {
         width: 360px;
     }
+        .horizontalLine {
+            display: none;
+        }
 }

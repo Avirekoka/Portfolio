@@ -2,18 +2,22 @@
 import { INavLink } from '@/interface';
 import { navLinks } from '@/utils/data';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 
 const Navbar = () => {
     const [toggle, setToggle] = useState<boolean>(false);
-    const [pathName, setPathName] = useState(window.location.pathname);
+    const [pathName, setPathName] = useState('');
 
     const setState = (link: string) => {
         setToggle(false);
         setPathName(link);
     };
+
+    useEffect(() => {
+        if (typeof window !== "undefined") setPathName(window.location.pathname);
+    }, []);
 
 
     return (

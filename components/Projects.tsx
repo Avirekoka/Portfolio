@@ -15,8 +15,8 @@ const Projects = () => {
                     {
                         projects.map((project) => {
                             return (
-                                <div className='flex w-32 items-center my-5' key={project.id}>
-                                    <hr className="border-2 border-black w-4" />
+                                <div className='flex items-center my-5' key={project.id}>
+                                    <hr className={`border-2 border-black w-4 ${styles.horizontalLine}`} />
                                     <motion.div
                                     >
                                         <div className={`bg-black border border-gray-200 rounded-lg shadow py-5 ${styles.projectDiv}`}>
