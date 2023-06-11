@@ -21,7 +21,7 @@ const Navbar = () => {
             <div className="w-full flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="/" className="flex items-center">
                     <div className='flex items-center gap-3'>
-                        <Image alt='Navbar' src='/large.png' width={50} height={50} className='rounded-full' />
+                        <img alt='Navbar' src='/large.png' width={50} height={50} className='rounded-full' />
                         <span className="md:text-2xl self-center font-semibold whitespace-nowrap dark:text-white">Nash-Dev</span>
                     </div>
                 </Link>

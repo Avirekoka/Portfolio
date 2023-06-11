@@ -33,7 +33,7 @@ const About = () => {
                 <div className='flex justify-center items-center flex-col md:flex-row'>
                     <div>
                         <motion.p className='md:hidden text-3xl mt-5 md:text-6xl font-bold text-center md:text-right'>ABOUT ME.</motion.p>
-                        <Image src='contactus-1.png' className={`${styles.aboutImage} p-5 md:p-0`} alt='contact us' />
+                        <img src='contactus-1.png' className={`${styles.aboutImage} p-5 md:p-0`} alt='contact us' />
                     </div>
                     <div>
                         <motion.p className={`text-3xl mt-5 md:text-6xl font-bold text-center md:text-right ${styles.aboutMeHeading}`}>ABOUT ME.</motion.p>
@@ -72,7 +72,7 @@ const About = () => {
                                             className={`px-8 py-4 border-2 bg-black text-white flex-col gap-2 rounded-lg ${styles.experienceCard}`}
                                         >
                                             <div className='flex gap-5 items-center justify-between'>
-                                                <Image src={experience.companyLogo} alt='Cere Labs' width={100} height={70} className='mb-2 bg-white p-2' />
+                                                <img src={experience.companyLogo} alt='Cere Labs' width={100} height={70} className='mb-2 bg-white p-2' />
                                                 <p>Total Experience - {experience.totalExperience.years}y {experience.totalExperience.months}m</p>
                                                 </div>
                                                 <p className='mb-4'> -{'>'} I joined {experience.companyName} on {experience.JoinedOn}.</p>
