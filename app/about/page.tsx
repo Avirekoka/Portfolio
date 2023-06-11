@@ -1,11 +1,10 @@
 'use client'
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion'
 import { experience } from '@/utils/data';
 import { IExperience } from '@/interface';
 import { calculateYearAndMonth, deviceWidth } from '@/utils/helper-functions';
 import styles from './about.module.css';
-import Image from 'next/image';
 
 const About = () => {
     const cardVariants = {
@@ -29,7 +28,7 @@ const About = () => {
     const { years, months } = calculateYearAndMonth(new Date("22 June 2021"), new Date());
     return (
         <div className='min-h-screen md:px-20'>
-            <div className={`md:px-20 md:pb-15 md:pt-10 mt-20 md:h-80 bg-black text-white border-2 rounded-3xl ${styles.avinash}`}>
+            <div className={`md:px-20 md:pb-15 md:pt-10 mt-20 md:h-80 bg-black text-white border-2 rounded-3xl`}>
                 <div className='flex justify-center items-center flex-col md:flex-row'>
                     <div>
                         <motion.p className='md:hidden text-3xl mt-5 md:text-6xl font-bold text-center md:text-right'>ABOUT ME.</motion.p>

@@ -1,0 +1,23 @@
+.homeImage {
+    width: 300px;
+    height: 400px;
+}
+
+.animatedDiv {
+    width: 500px;
+}
+
+@media screen and (max-width: 480px) {
+    .homeTagLine {
+        width: 360px;
+    }
+
+    .homeImage {
+        width: 300px;
+        height: 400px;
+    }
+
+    .animatedDiv {
+        width: 360px;
+    }
+}

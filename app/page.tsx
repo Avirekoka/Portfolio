@@ -2,7 +2,7 @@ import Home from '../components/Home'
 
 export default function Page() {
   return (
-    <main className="m-8">
+    <main>
       <Home />
     </main>
   )
